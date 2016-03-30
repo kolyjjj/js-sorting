@@ -6,6 +6,10 @@ var sort = require('../index');
 describe('sorting', function(){
 
   it('bubble sorting', function(){
+    expect(sort.bubble([])).to.deep.equal([]);
+    expect(sort.bubble([1])).to.deep.equal([1]);
+    expect(sort.bubble([1, 2, 3, 4, 5])).to.deep.equal([1, 2, 3, 4, 5]);
+    expect(sort.bubble([5, 4, 3, 2, 1])).to.deep.equal([1, 2, 3, 4, 5]);
     expect(sort.bubble([3,2,1,4,5,6,11])).to.deep.equal([1,2,3,4,5,6,11]);
   });
 });
