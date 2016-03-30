@@ -15,6 +15,18 @@ describe('sorting', function(){
   });
 
   it('insertion sort', function(){
-    expect(sort.insertion(3,2,1,4,5,6,11)).to.deep.equal([1,2,3,4,5,6,11]);
-    });
+    expect(sort.insertion([])).to.deep.equal([]);
+    expect(sort.insertion([1])).to.deep.equal([1]);
+    expect(sort.insertion([1, 2, 3, 4, 5])).to.deep.equal([1, 2, 3, 4, 5]);
+    expect(sort.insertion([5, 4, 3, 2, 1])).to.deep.equal([1, 2, 3, 4, 5]);
+    expect(sort.insertion([3,2,1,4,5,6,11])).to.deep.equal([1,2,3,4,5,6,11]);
+  });
+
+  it('selection sort', function(){
+    expect(sort.insertion([])).to.deep.equal([]);
+    expect(sort.insertion([1])).to.deep.equal([1]);
+    expect(sort.insertion([1, 2, 3, 4, 5])).to.deep.equal([1, 2, 3, 4, 5]);
+    expect(sort.insertion([5, 4, 3, 2, 1])).to.deep.equal([1, 2, 3, 4, 5]);
+    expect(sort.insertion([3,2,1,4,5,6,11])).to.deep.equal([1,2,3,4,5,6,11]);
+  });
 });
